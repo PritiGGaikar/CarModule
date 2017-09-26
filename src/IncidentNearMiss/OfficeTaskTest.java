@@ -13,16 +13,16 @@ import com.relevantcodes.extentreports.LogStatus;
 
 import common_Function.WebDriverPass;
 
-public class IncidentReportTest extends WebDriverPass {
+public class OfficeTaskTest  extends WebDriverPass {
 	ExtentReports report;
 	ExtentTest test;
-	IncidentReport w = new IncidentReport();
+	OfficeTask w = new OfficeTask();
 
 	@Test(priority = 1)
-	public void IncidentReports() throws Exception {
+	public void OfficeTasks() throws Exception {
 		try {
-			test = report.startTest("IncidentReport");
-			w.IncidentReports(driver);
+			test = report.startTest("OfficeTasks");
+			w.OfficeTasks(driver);
 			Assert.assertTrue(true);
 
 		} catch (Exception e) {

@@ -11,18 +11,19 @@ import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 
+
 import common_Function.WebDriverPass;
 
-public class IncidentReportTest extends WebDriverPass {
+public class Cartest extends WebDriverPass {
 	ExtentReports report;
 	ExtentTest test;
-	IncidentReport w = new IncidentReport();
+	Car w = new Car();
 
 	@Test(priority = 1)
-	public void IncidentReports() throws Exception {
+	public void CarTypeIncident() throws Exception {
 		try {
-			test = report.startTest("IncidentReport");
-			w.IncidentReports(driver);
+			test = report.startTest("CarTypeIncident");
+			w.CarTypeIncident(driver);
 			Assert.assertTrue(true);
 
 		} catch (Exception e) {
@@ -32,10 +33,10 @@ public class IncidentReportTest extends WebDriverPass {
 			
 		}
 
-		test.log(LogStatus.PASS, "Quality-->Incidents and Near-misses--> IncidentReport");
+		test.log(LogStatus.PASS, "Technical-->Worklist Index--> JobStatus");
 	
 }
-	
+
 	@AfterMethod
 	public void afterMethod(ITestResult result) {
 		if (result.getStatus() == ITestResult.FAILURE) {
@@ -58,7 +59,6 @@ public class IncidentReportTest extends WebDriverPass {
 	public void afterSu() {
 		report.close();
 	}
-
 
 
 }
